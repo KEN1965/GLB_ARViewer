@@ -6,8 +6,15 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		BED8D1F62F3AE05300659DF8 /* sample.glb in Resources */ = {isa = PBXBuildFile; fileRef = BED8D1F52F3AE05300659DF8 /* sample.glb */; };
+		BEE9C1112F5000010090087E /* GoogleMobileAds in Frameworks */ = {isa = PBXBuildFile; productRef = BEE9C1102F5000010090087E /* GoogleMobileAds */; };
+		BEF4B9122F3DAB440090087E /* GLTFSceneKit in Frameworks */ = {isa = PBXBuildFile; productRef = BEF4B9112F3DAB440090087E /* GLTFSceneKit */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		BED8D1E32F3AC6E500659DF8 /* GLB_ARViewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GLB_ARViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BED8D1F52F3AE05300659DF8 /* sample.glb */ = {isa = PBXFileReference; lastKnownFileType = file; path = sample.glb; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -23,6 +30,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BEE9C1112F5000010090087E /* GoogleMobileAds in Frameworks */,
+				BEF4B9122F3DAB440090087E /* GLTFSceneKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -32,6 +41,7 @@
 		BED8D1DA2F3AC6E500659DF8 = {
 			isa = PBXGroup;
 			children = (
+				BED8D1F52F3AE05300659DF8 /* sample.glb */,
 				BED8D1E52F3AC6E500659DF8 /* GLB_ARViewer */,
 				BED8D1E42F3AC6E500659DF8 /* Products */,
 			);
@@ -65,6 +75,8 @@
 			);
 			name = GLB_ARViewer;
 			packageProductDependencies = (
+				BEE9C1102F5000010090087E /* GoogleMobileAds */,
+				BEF4B9112F3DAB440090087E /* GLTFSceneKit */,
 			);
 			productName = GLB_ARViewer;
 			productReference = BED8D1E32F3AC6E500659DF8 /* GLB_ARViewer.app */;
@@ -94,6 +106,10 @@
 			);
 			mainGroup = BED8D1DA2F3AC6E500659DF8;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				BEE9C10F2F5000010090087E /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */,
+				BEF4B9102F3DAB440090087E /* XCRemoteSwiftPackageReference "GLTFSceneKit" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = BED8D1E42F3AC6E500659DF8 /* Products */;
 			projectDirPath = "";
@@ -109,6 +125,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BED8D1F62F3AE05300659DF8 /* sample.glb in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -254,13 +271,18 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 87M4KMG4N4;
-				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				ENABLE_DEBUG_DYLIB = NO;
+				ENABLE_PREVIEWS = NO;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = "GLB-ARViewer-Info.plist";
+				INFOPLIST_KEY_LSSupportsOpeningDocumentsInPlace = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "AR表示のためにカメラを使用します。";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "録画時に録音します。";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "録画をフォトライブラリに保存します。";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -269,6 +291,10 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.loco.GLB-ARViewer";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -286,13 +312,18 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 87M4KMG4N4;
-				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				ENABLE_DEBUG_DYLIB = NO;
+				ENABLE_PREVIEWS = NO;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = "GLB-ARViewer-Info.plist";
+				INFOPLIST_KEY_LSSupportsOpeningDocumentsInPlace = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "AR表示のためにカメラを使用します。";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "録画時に録音します。";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "録画をフォトライブラリに保存します。";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -301,6 +332,10 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.loco.GLB-ARViewer";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -332,6 +367,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		BEE9C10F2F5000010090087E /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/googleads/swift-package-manager-google-mobile-ads";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 12.0.0;
+			};
+		};
+		BEF4B9102F3DAB440090087E /* XCRemoteSwiftPackageReference "GLTFSceneKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/magicien/GLTFSceneKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.4.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		BEE9C1102F5000010090087E /* GoogleMobileAds */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BEE9C10F2F5000010090087E /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */;
+			productName = GoogleMobileAds;
+		};
+		BEF4B9112F3DAB440090087E /* GLTFSceneKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BEF4B9102F3DAB440090087E /* XCRemoteSwiftPackageReference "GLTFSceneKit" */;
+			productName = GLTFSceneKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = BED8D1DB2F3AC6E500659DF8 /* Project object */;
 }

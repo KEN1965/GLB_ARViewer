@@ -6,12 +6,22 @@
 //
 
 import SwiftUI
+#if canImport(GoogleMobileAds)
+import GoogleMobileAds
+#endif
 
 @main
 struct GLB_ARViewerApp: App {
+    init() {
+        #if canImport(GoogleMobileAds)
+        MobileAds.shared.start(completionHandler: nil)
+        #endif
+    }
+
+
     var body: some Scene {
         WindowGroup {
             ContentView()
+            }
         }
     }
-}
